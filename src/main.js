@@ -580,10 +580,11 @@ function shrink() {
 }
 
 function submit() {
-  let raw_input = input.val().toLowerCase();
+  let raw_input = input.val());
   if (raw_input != "") {
     convo.append("<div class='sent clearfix'>" + raw_input + "</div>");
     
+    raw_input.toLowerCase();
     if (raw_input == "!zatro") {
       convo.append(
         "<div class='received clearfix'>Hi! So, to basically understand what I am, do you know SimSimi? Well, I am like that, but since I am only made by one, I am not that 'advanced'. So, kausapin mo ako ng parang tao, okay? Just ask me anything!<br><br>COMMANDS:<br><ul><li>!acc - Show accuracy of model in your inputted words</li><br><li>!anim - Toggle background animation</li><br><li>!labels - Show every label that the bot is trained with</li><br><li>!quo - Just say a random quote</li><br><li>!dict - If accuracy is low, the model will get its output from the definition of a random word from your input <small>(Powered by <a href='https://dictionaryapi.dev/'>www.dictionaryapi.dev)</a></small></li><br><li>!cls - Clear textbox</li></ul>Mini Apps: <ul><li>!psswd - Generates a password for you</li><br></ul></div>"
@@ -684,7 +685,6 @@ function submit() {
                     ("context_filter" in tg &&
                       !context["123"].includes(tg["context_filter"]))
                   ) {
-                    console.log("hello");
                     arr.splice(result_index, 1);
                     result_index = arr.indexOf(Math.max(...arr));
                     tag = labels[result_index];
