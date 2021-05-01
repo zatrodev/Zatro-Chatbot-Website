@@ -233,12 +233,6 @@ function applyRules(value, isIntact) {
   return value
 }
 
-/**
- * Detect if a value is acceptable to return, or should be stemmed further.
- *
- * @param {string} value
- * @returns {boolean}
- */
 function acceptable(value) {
   return vowels.test(value.charAt(0))
     ? value.length > 1
