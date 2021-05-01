@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.1/dist/tf.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="squares.css">
+        <link rel="icon" href="./img/logo.png">
+        <title>Chatbot | Zatro</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="textbox">
+                <div id="conversation">
+                    <div id="title-bar"><span>Z A T R O</span></div>
+                    <div id="panel">code : s <br><br> s : code</div>
+                    <div class="received clearfix">
+                        Hello! I am a chatbot made by Robbie.
+                        Do you see that sad face over there?
+                        Well, he's been like that lately, and I need you to, please, input the <strong>pass code</strong>
+                        so that he may change emotions again.
+                        <br><br>
+                        But, if you don't have it, feel free to talk to me. (Type "!zatro" for help)
+                    </div>
+                </div>
+                <div id="text-bar">
+                    <div id="text-bar__field">
+                        <input type="text" id="text-input" autocomplete="off"/>
+                    </div>
+                    <div id="text-bar__send">
+                        <div id="send-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sad-face">
+                <div id="eye1" class="sad"></div>
+                <div id="mouth" class="sad" style="align-self: flex-end"></div>
+                <div id="eye2" class="sad"></div>
+            </div>
+        </div>
+        <script type="module" src="./src/main.js"></script>
+        <script src="./src/lancaster-stemmer.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("body").append(
+                    "<ul class='squares'><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>"
+                );
+            }); 
+        </script>
+    </body>
+</html>
