@@ -18,6 +18,7 @@ const yes_no = [
   "did",
   "hav",
   "am",
+  "wil
 ];
 var memo = {};
 var inputs = [];
@@ -684,7 +685,6 @@ function submit() {
             var result_index = arr.indexOf(Math.max(...arr));
             var tag = labels[result_index];
 
-            console.log(word_array[0]);
             if (
               arr[result_index] >= 0.95 ||
               (!get_dict && !yes_no.includes(word_array[0]))
