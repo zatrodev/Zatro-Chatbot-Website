@@ -18,7 +18,7 @@ const yes_no = [
   "did",
   "hav",
   "am",
-  "wil
+  "wil"
 ];
 var memo = {};
 var inputs = [];
