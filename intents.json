@@ -91,7 +91,7 @@
         },
         {"tag": "source_code",
          "patterns": ["Where is the source code?", "Where can I find the source code?", "Source code?", "Can I see your source code?", "saan source code nito?", "github?", "github"],
-         "responses": ["It's in my creator's <a href='https://github.com/zatrodev' target='_blank'>github</a>", "Nasa  <a id='github' href='https://github.com/zatrodev' target='_blank'github</a> niya lods"],
+         "responses": ["It's in my creator's <a href='https://github.com/zatrodev/Zatro-Chatbot-Website' target='_blank'>github</a>", "Nasa  <a id='github' href='https://github.com/zatrodev/Zatro-Chatbot-Website' target='_blank'>github</a> niya lods"],
          "context_set": ""
         },
         {"tag": "language",
@@ -126,7 +126,7 @@
         },
         {"tag": "trashtalk",
          "patterns": ["piece of shit", "garbage", "dumbfuck", "dumbass", "stupid bot", "obob mo", "bobo mo", "bobo ka pala e", "trash", "dumb"],
-         "responses": ["Oh, is that right? And what exactly have you accomplished in your lifetime to say this? Let me guess, nothing, yes?", "I am a bot made by a 16 year old, so stfu", "Of course I am, my vocabulary only contains 340 words, so stfu"],
+         "responses": ["Oh, is that right? And what exactly have you accomplished in your lifetime to say this? Let me guess, nothing, yes?", "I am a bot made by a 16 year old, so stfu", "Of course I am, my vocabulary only contains 343 words, so stfu"],
          "context_set": ""
         },
         {"tag": "greeting_fil",
@@ -218,6 +218,11 @@
          "patterns": ["weh?", "di nga?", "really?", "we?", "weh", "we"],
          "responses": ["Oo nga, promise", "Yes, he actually did", "Unbelievable, right?"],
          "context_filter": "creator_doubt"
+        },
+        {"tag": "full_access",
+         "patterns": ["full access?", "why is this website made?", "bakit ba ginawa ang website na ito?", "gain full access"],
+         "responses": ["Sorry, I am not allowed to say anything about that, unless you have the pass code"],
+         "context_set": ""
         },
         {"tag": "doubt_smart",
          "patterns": ["weh?", "di nga?", "we?"],
@@ -476,4 +481,3 @@
         }
    ]
 }
-
