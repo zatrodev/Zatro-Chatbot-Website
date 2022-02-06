@@ -18,7 +18,7 @@ const yes_no = [
   "did",
   "hav",
   "am",
-  "wil"
+  "wil",
 ];
 var memo = {};
 var inputs = [];
@@ -604,9 +604,107 @@ function submit() {
     convo.append("<div class='sent clearfix'>" + raw_input + "</div>");
 
     raw_input = raw_input.toLowerCase();
-    if (raw_input == "!zatro") {
+    if (raw_input === "jea9sdog") {
+      $("#mouth").css({
+        "border-color": "transparent transparent white transparent",
+        "border-radius": "0 0 100px 100px",
+      });
+
+      convo.append("<div class='received clearfix'>Finally</div>");
+      sad_face.css({ transform: "scale(0)" });
+      textbox.css({ transform: "scale(0)" });
+
+      setTimeout(function () {
+        textbox.css({ display: "none" });
+        sad_face.css({ display: "none" });
+        main_bg.css({ background: "rgba(222,205,127,255)", overflowY: "auto" });
+        setTimeout(function () {
+          document.getElementsByTagName("TITLE")[0].innerHTML = "The Sophia";
+          main_bg.append("<div id='container-play'></div>");
+          $("#container-play").append("<div id='type-anim'></div>");
+
+          var i = 0;
+          var txt = "The Sophia";
+          var speed = 175;
+          setTimeout(function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("type-anim").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }, 1000);
+          setTimeout(function () {
+            $("#container-play").append(
+              "<div id='table-play'><hr><strong>Success Rate</strong>	&nbsp	&nbsp	&nbsp Unknown<hr><strong>Attracts</strong>	&nbsp	&nbsp	&nbsp	&nbsp	&nbsp	&nbsp &nbsp Sophia (hopefully)<hr><strong>Requirements</strong>&nbsp &nbsp &nbsp everything you have<hr><strong>Prep Time</strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2-3 months (I think)<hr><strong>Bummers</strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Target has a bf (huge bummer right there)<hr></div>"
+            );
+            setTimeout(function () {
+              $("#container-play").append(
+                "<div id='title-play'>T H E &nbsp P L A Y</div>"
+              );
+              $("#container-play").append(
+                "<div class='content'><ol><li class='list'>During quarantine, chat with her as much as you can. But don't overdo it. Get to know her more, make her laugh, and show her that you are there.</li></ol></div>"
+              );
+
+              $("ol").append(
+                "<li class='list'>When face to face classes are available, grab that opportunity to ask her to be her date. Do the m'lady challenge you've talked about. Hopefully she says yes.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>If there is practice for the prom, then be ONLY friendly with her in the said practices. Just be causal, chat with her and don't show a hint of shyness. Make sure she's comfortable as you are with her.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>If prom is nearby, ask her as implicitly as you can if you can go with her to the prom. You don't own any vehicle so you'll be the one to join them. Masyadong makapal ang mukha, pero hey, totally worth it.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>If the said vehicle is a service then fine, but if it's her mom, better. Ask Sophia what her mom likes. And once you go to her house, bring flowers for Sophia and a gift that Sophia said her mom will like. Once you see Sophia, say that she's stunningly beautiful, because let's face it, she always is. </li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>In the house or in the car, show that you are a gentleman and a respectful man. Smile often and show to her mom that you genuinely care about her daughter.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>At the prom, ask her if you can open the door car for her. It's old-fashioned but sweet.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>As you get out from the car, look at her and offer your elbow and say  &quotM'lady?&quot. She'll grab it guaranteed.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>Escort her inside and just have fun with her.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>If the dance part is nearby, ask her if she will be dancing with other boys. Now, if she says no, then just be with her, but of course space bro. If she says yes, then say to her that you will be dancing with others too. But, make her promise that you will be the one to dance with her at the last slow dance.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>In the slow dance, as you are dancing, say to her, &quotMay I?&quot And put both her hands on your shoulders and yours to her hips</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>Just look in her eyes, concentrate on her, make her smile, just be with her.</li>"
+              );
+
+              $("ol").append(
+                "<li class='list'>In the near finale of the dance, don't say anything, and just look at those beautiful eyes. When the time is right, smile, and say, &quotSophia, you are legen- wait for it... dary. I'll miss you.&quot</li>"
+              );
+
+              $("ol").append("<li class='list'>You know the rest.</li>");
+
+              $("#container-play").append(
+                "<div class='content' id='msg'> <hr><br> Sophia, I know that you have someone already, pero I just want to say this to you, one last time. <br><br> And since yun nga aalis ka na sa RiSci, baka eto na lang yung chance na magawa ko ito. And alam kong irereject mo na ako XD, but it's fine, some things are worth failing for :>. <br><br> Thank you for everything, and once again, I'll miss you. <br><br><br></div>"
+              );
+            }, 5000);
+          }, 5000);
+        }, 1000);
+      }, 5000);
+    } else if (raw_input == "!zatro") {
       convo.append(
-        "<div class='received clearfix'>Hi! So, to basically understand what I am, do you know SimSimi? Well, I am like that, but since I am only made by one, I am not that 'advanced'. So, kausapin mo ako ng parang tao, okay? Just ask me anything!<br><br>COMMANDS:<br><ul><li>!acc - Show accuracy of model in your inputted words</li><br><li>!anim - Toggle background animation</li><br><li>!labels - Show every label that the bot is trained with</li><br><li>!quo - Just say a random quote</li><br><li>!dict - If accuracy is low, the model will get its output from the definition of a random word from your input <small>(Powered by <a href='https://dictionaryapi.dev/'>www.dictionaryapi.dev)</a></small></li><br><li>!cls - Clear textbox</li></ul>Mini Apps: <ul><li>!psswd - Generates a password for you</li><br></ul></div>"
+        "<div class='received clearfix'>Hi! So, to basically understand what I am, do you know SimSimi? Well, I am like that, but since I am only made by one, I am not that 'advanced'. So, kausapin mo ako ng parang tao, okay? Just ask me anything!<br><br>COMMANDS:<br><ul><li>!acc - Show accuracy of model in your inputted words</li><br><li>!anim - (If lagging only) Toggle background animation</li><br><li>!labels - Show every label that the bot is trained with</li><br><li>!quo - Just say a random quote</li><br><li>!dict - If accuracy is low, the model will get its output from the definition of a random word from your input <small>(Powered by <a href='https://dictionaryapi.dev/'>www.dictionaryapi.dev)</a></small></li><br><li>!cls - Clear textbox</li></ul>Mini Apps: <ul><li>!psswd - Generates a password for you</li><br></ul></div>"
       );
     } else if (raw_input == "!acc") {
       show_acc = true;
@@ -723,8 +821,23 @@ function submit() {
               printResponse();
             } else if (arr[result_index] < 0.95) {
               if (yes_no.includes(word_array[0])) {
-                let yes_response = ["All signs point to yes","Absolutely","My sources say yes","Mais oui","By all means","Yes, of course","Certainly",];
-                let no_response = ["My sources say no","Unfortunately not","I find the idea undesirable", "Certainly not","Not on any account","I don't think so",];
+                let yes_response = [
+                  "All signs point to yes",
+                  "Absolutely",
+                  "My sources say yes",
+                  "Mais oui",
+                  "By all means",
+                  "Yes, of course",
+                  "Certainly",
+                ];
+                let no_response = [
+                  "My sources say no",
+                  "Unfortunately not",
+                  "I find the idea undesirable",
+                  "Certainly not",
+                  "Not on any account",
+                  "I don't think so",
+                ];
 
                 if (!(raw_input in memo)) {
                   memo[raw_input] = Math.floor(Math.random() * 2);
@@ -732,10 +845,14 @@ function submit() {
 
                 if (memo[raw_input] == 0) {
                   response =
-                    yes_response[Math.floor(Math.random() * yes_response.length)];
+                    yes_response[
+                      Math.floor(Math.random() * yes_response.length)
+                    ];
                 } else if (memo[raw_input] == 1) {
                   response =
-                    no_response[Math.floor(Math.random() * yes_response.length)];
+                    no_response[
+                      Math.floor(Math.random() * yes_response.length)
+                    ];
                 }
 
                 printResponse();
